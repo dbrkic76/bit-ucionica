@@ -7,25 +7,25 @@
 // var uslov = 7;
 // switch (uslov) {
 //   case 1:
-//     console.log("Monday");
+//     console.log("Ponedeljak");
 //     break;
 //   case 2:
-//     console.log("Tuesday");
+//     console.log("Utorak");
 //     break;
 //   case 3:
-//     console.log("Wednesday");
+//     console.log("Sreda");
 //     break;
 //   case 4:
-//     console.log("Thursday");
+//     console.log("Cetvrtak");
 //     break;
 //   case 5:
-//     console.log("Friday");
+//     console.log("Petak");
 //     break;
 //   case 6:
-//     console.log("Saturday");
+//     console.log("Subota");
 //     break;
 //   case 7:
-//     console.log("Sunday");
+//     console.log("Nedelja");
 //     break;
 // }
 //
