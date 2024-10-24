@@ -60,7 +60,7 @@
 // }
 // console.log(is3DigitNumber(180));
 //
-//                              SOLUTION
+//                              SOLUTION 3
 //
 // function threeDigitNumber(a) {
 //     if (a >= 100 && a <= 999) {
@@ -68,17 +68,6 @@
 //     } else return (c = "This number is NOT a 3 digit number");
 //   }
 //   console.log(threeDigitNumber(98));
-//
-//                              SOLUTION (Nikola)
-//
-// function getNumberLenght() {
-//     if (typeof a == "number") {
-//       return (a + " ").getNumberLenght;
-//     }
-//     return 0;
-//   }
-//
-//   console.log(getNumberLenght(334));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -112,25 +101,25 @@
 // *    *
 // *****
 //
-//                              SOLUTION (NE RADI)
+//                              SOLUTION 1
 //
 // function printPattern(n) {
 //   var pattern = "";
 //   for (var i = 0; i < n; i++) {
 //     for (var j = 0; j < n; j++) {
-//       if (i === 0 || j === 0 || i === n - 1 || j === n - 1){
-//       pattern += "*\t";
+//       if (i === 0 || j === 0 || i === n - 1 || j === n - 1) {
+//         pattern += "*\t";
+//       } else {
+//         pattern += "\t";
+//       }
 //     }
 //     pattern += "\n";
-//   }
-//   else {
-//     pattern+= "\t"
 //   }
 //   return pattern;
 // }
 // console.log(printPattern(5));
 //
-//                              SOLUTION
+//                              SOLUTION 2
 //
 // function square(a) {
 //   if (a <= 0) {
@@ -165,26 +154,24 @@
 // * * *
 // * * * * * * *
 //
-//                              SOLUTION (NE RADI)
+//                              SOLUTION
 //
-// fuction printPattern(x,y,z){
-//     var pattern = "";
-//     for (var i = 0; i < x; i++){
-//         pattern += "*\t"
-//     }
-//     pattern += "\n"
-//     var pattern = "";
-//     for (var i = 0; i < x; i++){
-//         pattern += "*\t"
-//     }
-//     pattern += "\n"
-//     var pattern = "";
-//     for (var i = 0; i < x; i++){
-//         pattern += "*\t"
-//     }
-//     return pattern
+// function printPattern(x, y, z) {
+//   var pattern = "";
+//   for (var i = 0; i < x; i++) {
+//     pattern += "*\t";
+//   }
+//   pattern += "\n";
+//   for (var i = 0; i < y; i++) {
+//     pattern += "*\t";
+//   }
+//   pattern += "\n";
+//   for (var i = 0; i < z; i++) {
+//     pattern += "*\t";
+//   }
+//   return pattern;
 // }
-// console.log(printPattern(5,3,7))
+// console.log(printPattern(5, 3, 7));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -197,7 +184,7 @@
 // function calculateNumDigits(x) {
 //   return (x + "").length;
 // }
-// console.log(calculateNumDigits(1251));
+// console.log(calculateNumDigits(12251));
 //
 //
 //                              SOLUTION 2
@@ -210,9 +197,9 @@
 //     x /= 10;
 //     i++;
 //   }
-//   return i;
+//   return i + 1;
 // }
-// console.log(calculateNumDigits(7654321));
+// console.log(calculateNumDigits(4321));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -244,19 +231,19 @@
 //
 // ZADATAK 9. Write a program that calculates the sum of odd elements of a given array.
 //
-//                              SOLUTION (NEED CORRECTION)
+//                              SOLUTION
 //
-// function sumOfOdd(array) {
-//   var suma = 0;
-//   for (var i = 0; i < array.lenght; i++) {
-//     var element = array[i];
-//     if (isOdd(element)) {
-//       suma += element;
-//     }
-//   }
-//   return suma;
-//   console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
-// }
+function sumOfOdd(array) {
+  var suma = 0;
+  for (var i = 0; i < array.length; i++) {
+    var element = array[i];
+    if (isOdd(element)) {
+      suma += element;
+    }
+  }
+  return suma;
+}
+console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
 //
 //
 //----------------------------------------------------------------------------------------------------
