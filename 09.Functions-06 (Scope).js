@@ -89,6 +89,32 @@
 // }
 // multiplicationTable(12);
 //
+//                              SOLUTION (Martin)
+//
+//RESENJE(MARTIN);
+// function multiplicationTable(n) {
+//   var table = "";
+//   for (var i = 1; i < n; i++) {
+//     table += `${1} x ${i} = ${1 * i}\n`;
+//   }
+//   return table;
+// }
+// console.log(multiplicationTable(12));
+//
+//                              SOLUTION 2 (Martin)
+//
+// function multiplicationTable(n) {
+//   var table = "";
+//   for (var i = 1; i <= n; i++) {
+//     for (var j = 1; j <= n; j++) {
+//       table += `${i} x ${j} = ${i * j}\n`; // Use \n for new line
+//     }
+//     table += "\n"; // Add a new line after each row
+//   }
+//   return table;
+// }
+// console.log(multiplicationTable(12));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -157,13 +183,44 @@
 // }
 // console.log(minMaxElements([-2, 5, 38, 11, 4, 35, 0, 1, -68]));
 //
+//                              SOLUTION (Martin)
+//
+// function findMaxAndMin(array) {
+//   var max = array[0];
+//   var min = array[0];
+//   for (var i = 1; i < array.length; i++) {
+//     if (array[i] > max) {
+//       max = array[i];
+//     }
+//     if (array[i] < min) {
+//       min = array[i];
+//     }
+//   }
+//   return { max, min };
+// }
+// console.log(findMaxAndMin([1, 2, 0, 2, 7]));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
 //
 // ZADATAK 9. Write a function to find the median element of array.
 //
-//                              SOLUTION
+//                              SOLUTION (Martin)
+//
+// let array = [3, 2, 4, 1, 5];
+// function medianElement(arr) {
+//   var newArr = arr.sort((a, b) => a - b);
+//   let mid = Math.floor(newArr.length / 2);
+//   let beforeMid = Math.floor(newArr.length / 2) - 1;
+//   if (newArr.length % 2 !== 0) {
+//     return newArr[mid];
+//   } else {
+//     return (newArr[mid] + newArr[beforeMid]) / 2;
+//   }
+//   return 1;
+// }
+// console.log(medianElement(array));
 //
 //
 //----------------------------------------------------------------------------------------------------
