@@ -98,7 +98,6 @@
 //     }
 //     result[letter].push(i);
 //   }
-
 //   return result;
 // }
 // console.log(mapLetters("dodo"));
@@ -197,3 +196,22 @@
 // 80]}…]) ➞ "John" // John's avg = 90 // Bob's avg = 83.33
 //
 //                              SOLUTION
+//
+//
+//----------------------------------------------------------------------------------------------------
+//
+// ZADATAK (Martin)
+// function createObject(name, size, color, width) {
+//   return {
+//     name_obj: name,
+//     size_obj: size,
+//     color_obj: color,
+//     width_obj: width,
+//     speak_obj: function () {
+//       console.log(this.name_obj);
+//     },
+//   };
+// }
+// var obj = createObject("Martin", 1, "blue", 200);
+// console.log(obj);
+// obj.speak_obj();
