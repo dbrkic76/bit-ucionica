@@ -4,6 +4,15 @@
 //
 //                              SOLUTION
 //
+// function isString(input) {
+//   if (typeof input == "string") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(isString(12));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -16,6 +25,20 @@
 //
 //                              SOLUTION
 //
+// function isStringBlank(someValue) {
+//   if (!someValue) return true;
+//   for (let i = 0; i < someValue.length; i++) {
+//     if (someValue[i] !== " ") {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isStringBlank(""));
+// console.log(isStringBlank("   "));
+// console.log(isStringBlank("Hello"));
+// console.log(isStringBlank("  World  "));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -26,6 +49,15 @@
 //
 //                              SOLUTION
 //
+// function concatenateString(someString, n) {
+//   newString = "";
+//   for (i = 0; i < n; i++) {
+//     newString += someString;
+//   }
+//   return newString;
+// }
+// console.log(concatenateString("Ha", 5));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -34,6 +66,17 @@
 // "My random string", "n" -> 2
 //
 //                              SOLUTION
+//
+// function letterOccurence(someString, someLetter) {
+//   var brojac = 0;
+//   for (i = 0; i < someString.length; i++) {
+//     if (someString[i] === someLetter) {
+//       brojac++;
+//     }
+//   }
+//   return brojac;
+// }
+// console.log(letterOccurence("My random string", "n"));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -45,6 +88,12 @@
 //
 //                              SOLUTION
 //
+// function firstOccurence(someString, n) {
+//   var result = someString.indexOf(n);
+//   return result;
+// }
+// console.log(firstOccurence("Neki nasumicni tekst", "m"));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -54,6 +103,12 @@
 // function should return -1.
 //
 //                              SOLUTION
+//
+// function firstOccurence(someString, n) {
+//   var result = someString.lastIndexOf(n);
+//   return result;
+// }
+// console.log(firstOccurence("Neki nasumicni tekstm", "m"));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -66,6 +121,17 @@
 //
 //                              SOLUTION
 //
+// function convertStringToArray(someString) {
+//   var someArray = [];
+//   for (i = 0; i < someString.length; i++) {
+//     if (someString[i] === " ") {
+//       someArray[i] = null;
+//     } else someArray[i] = someString[i];
+//   }
+//   return someArray;
+// }
+// console.log(convertStringToArray("My random string"));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -76,6 +142,19 @@
 // divisors other than 1 and itself.
 //
 //                              SOLUTION
+//
+// function isPrimeNumber(n) {
+//   if (n < 2) {
+//     return `Number ${n} is NOT a prime number`;
+//   }
+//   for (let i = 2; i < n; i++) {
+//     if (n % i === 0) {
+//       return `Number ${n} is NOT a prime number`;
+//     }
+//   }
+//   return `Number ${n} is a prime number`;
+// }
+// console.log(isPrimeNumber(5));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -89,6 +168,22 @@
 //
 //                              SOLUTION
 //
+// function replaceSpace(someString, someSeparator) {
+//   var newString = "";
+//   if (someSeparator === undefined) {
+//     someSeparator = "-";
+//   }
+//   for (var i = 0; i < someString.length; i++) {
+//     if (someString[i] === " ") {
+//       newString += someSeparator;
+//     } else {
+//       newString += someString[i];
+//     }
+//   }
+//   return newString;
+// }
+// console.log(replaceSpace("My random string"));
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -97,6 +192,23 @@
 // created string.
 //
 //                              SOLUTION
+//
+// function addDots(someString, n) {
+//   newString = "";
+//   if (n > someString.length) {
+//     return `Uneta vrednost (${n}) je veca od duzine stringa`;
+//   } else {
+//     for (i = 0; i <= n; i++) {
+//       if (newString.length < n) {
+//         newString += someString[i];
+//       } else {
+//         newString += "...";
+//       }
+//     }
+//   }
+//   return newString;
+// }
+// console.log(addDots("Neki nasumicni tekst", 5));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -107,6 +219,22 @@
 // ["1", "21", undefined, "42", "1e+3", Infinity] -> [1, 21, 42, 1000]
 //
 //                              SOLUTION
+
+//
+function convertStringsToNumbers(someArray) {
+  newArray = [];
+  for (i = 0; i < someArray.length; i++) {
+    if (someArray[i] != string) {
+      newArray = newArray;
+    } else {
+      newArray += someArray[i] * 1;
+    }
+  }
+  return newArray;
+}
+console.log(
+  convertStringsToNumbers(["1", "21", undefined, "42", "1e+3", Infinity])
+);
 //
 //
 //----------------------------------------------------------------------------------------------------

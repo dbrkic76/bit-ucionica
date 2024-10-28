@@ -233,17 +233,17 @@
 //
 //                              SOLUTION
 //
-function sumOfOdd(array) {
-  var suma = 0;
-  for (var i = 0; i < array.length; i++) {
-    var element = array[i];
-    if (isOdd(element)) {
-      suma += element;
-    }
-  }
-  return suma;
-}
-console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
+// function sumOfOdd(array) {
+//   var suma = 0;
+//   for (var i = 0; i < array.length; i++) {
+//     var element = array[i];
+//     if (element % 2 !== 0) {
+//       suma += element;
+//     }
+//   }
+//   return suma;
+// }
+// console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -252,19 +252,19 @@ console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
 // ZADATAK 10. Write a program that calculates the number of appearances of a letter a in a given string.
 // Modify the program so it calculates the number of both letters a and A.
 //
-//                              SOLUTION (NOT WORKING)
+//                              SOLUTION
 //
-// function calculateAppereance(str) {
+// function calculateAppearance(str) {
 //   var brojac = 0;
-//   for (var i = 0; i < str.lenght; i++) {
+//   for (var i = 0; i < str.length; i++) {
 //     var element = str[i];
-//     if (element === "a") {
+//     if (element === "a" || element === "A") {
 //       brojac++;
 //     }
 //   }
 //   return brojac;
 // }
-// console.log(calculateAppereance("Dragan"));
+// console.log(calculateAppearance("Dragaan"));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -279,9 +279,7 @@ console.log(sumOfOdd([3, 5, 9, 8, 8, 8]));
 //   var konkateniranString = "";
 //   for (var i = 0; i < broj; i++) {
 //     konkateniranString += str;
-//     {
-//       return konkateniranString;
-//     }
-//     console.log(concatenateString("abc", 2));
 //   }
+//   return konkateniranString;
 // }
+// console.log(concatenateString("abc", 4));
