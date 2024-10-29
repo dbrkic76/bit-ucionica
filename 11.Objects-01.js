@@ -61,58 +61,58 @@
 //                              SOLUTION (Martin)
 //
 // 4. zadatak        string, string, number,     array,      number,    array
-function createRecipe(
-  name,
-  cuisine,
-  complexity,
-  ingredients,
-  prepTime,
-  instructions
-) {
-  return {
-    name: name,
-    cuisine: cuisine,
-    complexity: complexity,
-    ingredients: ingredients,
-    prepTime: prepTime,
-    instructions: instructions,
-    printIngredients: function () {
-      for (var i = 0; i < this.ingredients.length; i++) {
-        console.log(this.ingredients[i]);
-      }
-    },
-    checkPrepTime: function () {
-      if (this.prepTime < 15) {
-        return true;
-      }
-      return false;
-    },
-    changeCuisine: function (cuisine) {
-      // addObjProperty(this, "cuisine", cuisine)
-      this.cuisine = cuisine;
-    },
-    deleteIngredient: function (ingredient) {
-      this.ingredients = this.ingredients.filter((e) => e !== ingredient); // filter vraca novi niz, pa moramo da setujemo taj niz opet na isti property
-      //this.ingredients.splice(this.ingredients.indexOf(ingredient), 1) // splice menja vec postojeci niz! Bolja opcija
-    },
-  };
-}
+// function createRecipe(
+//   name,
+//   cuisine,
+//   complexity,
+//   ingredients,
+//   prepTime,
+//   instructions
+// ) {
+//   return {
+//     name: name,
+//     cuisine: cuisine,
+//     complexity: complexity,
+//     ingredients: ingredients,
+//     prepTime: prepTime,
+//     instructions: instructions,
+//     printIngredients: function () {
+//       for (var i = 0; i < this.ingredients.length; i++) {
+//         console.log(this.ingredients[i]);
+//       }
+//     },
+//     checkPrepTime: function () {
+//       if (this.prepTime < 15) {
+//         return true;
+//       }
+//       return false;
+//     },
+//     changeCuisine: function (cuisine) {
+//       // addObjProperty(this, "cuisine", cuisine)
+//       this.cuisine = cuisine;
+//     },
+//     deleteIngredient: function (ingredient) {
+//       this.ingredients = this.ingredients.filter((e) => e !== ingredient); // filter vraca novi niz, pa moramo da setujemo taj niz opet na isti property
+//       //this.ingredients.splice(this.ingredients.indexOf(ingredient), 1) // splice menja vec postojeci niz! Bolja opcija
+//     },
+//   };
+// }
 
-var recept = createRecipe(
-  "Pasta",
-  "Italian",
-  2,
-  ["pasta", "olive oil", "garlic", "tomato", "basil", "salt"],
-  14,
-  ["cook pasta", "add ingredients", "mix together"]
-);
-// console.log(recept)
-recept.printIngredients();
-// console.log(recept.checkPrepTime())
+// var recept = createRecipe(
+//   "Pasta",
+//   "Italian",
+//   2,
+//   ["pasta", "olive oil", "garlic", "tomato", "basil", "salt"],
+//   14,
+//   ["cook pasta", "add ingredients", "mix together"]
+// );
+// // console.log(recept)
+// recept.printIngredients();
+// // console.log(recept.checkPrepTime())
 
-recept.changeCuisine("french");
-// console.log(recept)
+// recept.changeCuisine("french");
+// // console.log(recept)
 
-console.log(recept.ingredients);
-recept.deleteIngredient("garlic");
-console.log(recept.ingredients);
+// console.log(recept.ingredients);
+// recept.deleteIngredient("garlic");
+// console.log(recept.ingredients);
