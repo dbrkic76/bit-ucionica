@@ -527,12 +527,48 @@
 //
 // ZADATAK 7. c. Write a function that checks if a given string is a valid hexadecimal color.
 //
-//                              SOLUTION (DODAJ USLOV #)
+//                              SOLUTION
 //
-function isHexValid(inputString) {
-  return /^[0-9a-fA-F]+$/.test(inputString);
-}
-console.log(isHexValid("#00FF00"));
+// function isValidHexCode(str) {
+//   if (str[0] != "#") return false;
+//   if (!(str.length == 4 || str.length == 7)) return false;
+//   for (let i = 1; i < str.length; i++)
+//     if (
+//       !(
+//         (str[i].charCodeAt(0) <= "0".charCodeAt(0) &&
+//           str[i].charCodeAt(0) <= 9) ||
+//         (str[i].charCodeAt(0) >= "a".charCodeAt(0) &&
+//           str[i].charCodeAt(0) <= "f".charCodeAt(0)) ||
+//         str[i].charCodeAt(0) >= "A".charCodeAt(0) ||
+//         str[i].charCodeAt(0) <= "F".charCodeAt(0)
+//       )
+//     )
+//       return false;
+//   return true;
+// }
+// console.log(isValidHexCode("#3524fa"));
+//
+//                              SOLUTION (Nikola)
+//
+// function isHex(string) {
+//   if (string.indexOf("#") === 0) {
+//     string = string.slice(1);
+//   }
+//   if (string.length !== 6 && string.length !== 3) {
+//     return false;
+//   }
+//   for (var i = 0; i < string.length; i++) {
+//     var hexDigit = string.charAt(i);
+//     var decimalHexDigit = parseInt(hexDigit, 16);
+//     if (isNaN(decimalHexDigit)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// var input = "#f9f9f9";
+// var output = isHex(input);
+// console.log(output);
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -540,6 +576,13 @@ console.log(isHexValid("#00FF00"));
 //
 // ZADATAK 7. d. Write a function that checks if a given number belongs to the interval from 1900
 // to 2018.
+//
+//                              SOLUTION (JS Default YYYY-MM-DD)
+//
+// function isValidDate(inputDateString) {
+//   return !isNaN(Date.parse(inputDateString));
+// }
+// console.log(isValidDate("2024-11-01"));
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -549,6 +592,67 @@ console.log(isHexValid("#00FF00"));
 // stringValidator, passwordValidator, colorValidator, and yearValidator referencing
 // the functions from a) to d).
 //
+// FUNCTION A
+//
+// function checkIfCapital(inputString) {
+//   var capitalString = inputString.toUpperCase();
+//   var result = capitalString.localeCompare(inputString);
+//   return result === 0
+//     ? "Input string is ALL Caps"
+//     : "Input String is NOT ALL CAPS";
+// }
+// console.log(checkIfCapital("TEST STRING IS WRITTEN IN CAPITAL"));
+//
+// FUNCTION B
+//
+// function containsNumber(str) {
+//   return !isNaN(parseFloat(str)) && isFinite(str);
+// }
+// console.log(containsNumber("Hello World")); // Output: false
+// console.log(containsNumber("Hello123")); // Output: true
+//
+// FUNCTION C
+//
+// function isValidHexCode(str) {
+//   if (str[0] != "#") return false;
+//   if (!(str.length == 4 || str.length == 7)) return false;
+//   for (let i = 1; i < str.length; i++)
+//     if (
+//       !(
+//         (str[i].charCodeAt(0) <= "0".charCodeAt(0) &&
+//           str[i].charCodeAt(0) <= 9) ||
+//         (str[i].charCodeAt(0) >= "a".charCodeAt(0) &&
+//           str[i].charCodeAt(0) <= "f".charCodeAt(0)) ||
+//         str[i].charCodeAt(0) >= "A".charCodeAt(0) ||
+//         str[i].charCodeAt(0) <= "F".charCodeAt(0)
+//       )
+//     )
+//       return false;
+//   return true;
+// }
+// console.log(isValidHexCode("#3524fa"));
+//
+// FUNCTION D
+//
+// function isValidDate(inputDateString) {
+//   return !isNaN(Date.parse(inputDateString));
+// }
+// console.log(isValidDate("2024-11-01"));
+//
+//                              SOLUTION
+//
+// function validator(stringVal, passVal, colorVal, yearVal) {
+//   return {
+//     stringVal,
+//     passVal,
+//     colorVal,
+//     yearVal,
+//   };
+// }
+// console.log(
+//   validator(checkIfCapital, containsNumber, isValidHexCode, isValidDate)
+// );
+//
 //
 //----------------------------------------------------------------------------------------------------
 //
@@ -556,6 +660,46 @@ console.log(isHexValid("#00FF00"));
 // ZADATAK 8. Write a function that calculates a number of days to your birthday.
 // Input: 25 February
 // Output: 5 days
+//
+//                              SOLUTION (Nikola)
+//
+// function calculateDateBetween(inputDate) {
+//   var currentDate = new Date();
+//   if (
+//     !inputDate ||
+//     !inputDate instanceof Date ||
+//     inputDate.getTime() < currentDate.getTime()
+//   ) {
+//     throw new Error("Input date is invalid");
+//   }
+//   var numberOfMilisecondsPerDay = 1000 * 60 * 60 * 24;
+//   var result = Math.floor(
+//     (inputDate.getTime() - currentDate.getTime()) / numberOfMilisecondsPerDay
+//   );
+//   return result;
+// }
+// console.log(calculateDateBetween(new Date(2024, 10, 3))); //months are indexed from 0
+//
+//                              SOLUTION (ChatGPT)
+//
+// function daysUntilBirthday(birthday) {
+//   const today = new Date();
+//   const nextBirthday = new Date(
+//     today.getFullYear(),
+//     birthday.getMonth(),
+//     birthday.getDate()
+//   );
+//   // If the birthday has already occurred this year, set it to next year
+//   if (nextBirthday < today) {
+//     nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+//   }
+//   const timeDiff = nextBirthday - today; // difference in milliseconds
+//   const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // convert to days
+//   return daysDiff;
+// }
+// // Example usage:
+// const myBirthday = new Date("YYYY-MM-DD"); // replace with your birthday
+// console.log(`Days until birthday: ${daysUntilBirthday(myBirthday)}`);
 //
 //
 //----------------------------------------------------------------------------------------------------
@@ -572,19 +716,104 @@ console.log(isHexValid("#00FF00"));
 //
 // ZADATAK 10. a. Write a constructor function that creates points in space. Each point in space has
 // its own x, y, and z coordinate. For example, (3, 5, 1) can be a point in space.
+//
+//                              SOLUTION
+//
+// function Point(x, y, z) {
+//   this.x = x;
+//   this.y = y;
+//   this.z = z;
+// }
+// var p1 = new Point(1, 2, 3);
+// var p2 = new Point(4, 5, 6);
+//
+//
+//----------------------------------------------------------------------------------------------------
+//
+//
 // ZADATAK 10. b. Write a function that calculates the distance between two points in the space.
-
+//
+//                              SOLUTION
+//
+// function distanceBetweenTwoPoints(point1, point2) {
+//   var dx = point1.x - point2.x;
+//   var dy = point1.y - point2.y;
+//   var dz = point1.z - point2.z;
+//   var result = Math.sqrt(dx * dx + dy * dy + dz * dz);
+//   return result;
+// }
+// console.log(distanceBetweenTwoPoints(p1, p2));     // parametre dobija iz prethodnog zadatka (10.a)
+//
+//
+//----------------------------------------------------------------------------------------------------
+//
+//
 // ZADATAK 11. a. Write a function that generates a random integer value between 5 and 20.
+//
+//                              SOLUTION (from 1 to 10)
+//
+// function randomNumberGenerator() {
+//   var result = Math.random();
+//   return result.toFixed(1) * 10;
+// }
+// console.log(randomNumberGenerator());
+//
+//                              SOLUTION (from 5 to 20)
+//
+// function randomNumberGenerator(from, to) {
+//   {
+//     var min = Math.ceil(from);
+//     var max = Math.floor(to);
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+//   }
+// }
+// console.log(randomNumberGenerator(5, 20));
+//
+//
+//----------------------------------------------------------------------------------------------------
+//
+//
 // ZADATAK 11. b. Write a function that generates a random integer value between 50 and 100.
+//
+//                              SOLUTION (from 50 to 100)
+//
+// function randomNumberGenerator(from, to) {
+//   {
+//     var min = Math.ceil(from);
+//     var max = Math.floor(to);
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+//   }
+// }
+// console.log(randomNumberGenerator(50, 100));
+//
+//                              SOLUTION (Nikola)
+//
+// function randomNumberGenerator(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min); // min and max included
+// }
+//
+//
+//----------------------------------------------------------------------------------------------------
+//
+//
 // ZADATAK 11. c. Write a function which expects a number and a callback generator function and
 // returns an array of numbers produced by the generator function.
+//
+//                              SOLUTION (Nikola) - koristi prethodnu f-ju (11.b) kao Callback
+//
+// function returnGeneratedNumbers(num, min, max, callback) {
+//   var result = [];
+//   for (var i = 0; i < num; i++) {
+//     result.push(callback(min, max));
+//   }
+//   return result;
+// }
+// console.log(returnGeneratedNumbers(5, 1, 100, randomNumberGenerator)); // generise 5 brojeva izmedju 1 i 100 pozivajuci prethodnu f-ju
 //
 //
 //----------------------------------------------------------------------------------------------------
 //
 //
 // ZADATAK 12. Write a function that shuffles the elements of a given array.
-
 // Input: [3, 6, 11, 2, 9, 1]
-
 // Output: [6, 2, 9, 1, 3, 11] (it can be any random permutation of the given array)
