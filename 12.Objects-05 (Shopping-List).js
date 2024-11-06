@@ -15,7 +15,7 @@
         this.name +
         ", " +
         this.price
-      );
+);
     };
   }
   function ShoppingBag() {
