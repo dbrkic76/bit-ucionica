@@ -1,0 +1,35 @@
+button {
+  font-size: 50px;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+  background-color: darkmagenta;
+  color: white;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+div {
+  display: flex;
+  width: 80%;
+  height: 200px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.result {
+  display: flex;
+  border: 10px solid blue;
+  border-radius: 50px;
+  width: 300px;
+}
+body {
+  padding-top: 50px;
+  justify-items: center;
+}
+.result {
+  font-size: 200px;
+  justify-content: center;
+}
