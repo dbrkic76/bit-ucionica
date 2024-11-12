@@ -1,0 +1,22 @@
+img {
+  width: 500px;
+}
+ul {
+  border: 10px solid black;
+  border-radius: 50px;
+  font-size: 36px;
+}
+img {
+  border: 10px solid blue;
+  border-radius: 50px;
+}
+.container {
+  justify-items: center;
+}
+li {
+  list-style: none;
+}
+
+input {
+  
+}
