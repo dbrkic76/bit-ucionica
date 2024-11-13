@@ -154,6 +154,7 @@ projectDesc.setAttribute("position", "absolute");
 projectDescInput.type = "textarea";
 projectDescInput.setAttribute("cols", "30");
 projectDescInput.setAttribute("rows", "5");
+projectDescInput.style.maxWidth = "250px";
 projectDescInput.setAttribute("placeholder", "Describe your project");
 innerWrapper.append(projectDesc);
 projectDesc.append(projectDescInput);
