@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+html {
+  display: flex;
+  justify-content: center;
+}
+body {
+  width: 960px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em;
+}
+.header p {
+  font-size: 2em;
+}
+.header a {
+  text-decoration: none;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 1em;
+  gap: 1em;
+}
+label {
+  font-size: 2em;
+}
+input {
+  font-size: 1.5em;
+  width: 20em;
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+}
+.submit {
+  align-self: center;
+}
+textarea {
+  font-size: 1.5em;
+  border-radius: 1em;
+  padding: 0.5em;
+}

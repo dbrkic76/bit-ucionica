@@ -18,11 +18,21 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 1em;;
+  padding: 1em;
 }
 .header h3 {
   font-size: 1.2em;
   margin: 0;
+}
+.header .wrapper {
+  position: relative;
+}
+.header .search-results {
+  position: absolute;
+  /* bottom: -20px; */
+  background-color: white;
+  color: black;
+  width: 100%;
 }
 .main {
   display: flex;
@@ -48,17 +58,14 @@ body {
   padding-bottom: 0.8em;
 }
 .showDetailsPoster {
-  width: 65%
+  width: 65%;
 }
 .showDetailsPoster img {
   max-width: 100%;
 }
-.showDetailsSeasonsCast {
-
-}
 .showDetailsPlot {
   margin-bottom: 0.8em;
-  width: 80%
+  width: 80%;
 }
 li {
   text-indent: 1em;
@@ -70,13 +77,12 @@ li {
   padding: 2em;
   justify-content: space-between;
   font-size: 0.8em;
-  width:80%;
+  width: 80%;
 }
 h4 {
-  font
-  margin-top: 0.7em;
+  /* font
+  margin-top: 0.7em; */
   margin-bottom: 0.7em;
-  
 }
 .footer {
   color: white;
@@ -86,10 +92,8 @@ h4 {
   width: 100%;
 }
 
-
 h3 {
   font-size: 1.4em;
   margin-top: 0.7em;
-  margin-bottom: 0.7em
+  margin-bottom: 0.7em;
 }
-

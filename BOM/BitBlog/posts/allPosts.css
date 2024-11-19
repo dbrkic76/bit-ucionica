@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+html {
+  display: flex;
+  justify-content: center;
+}
+body {
+  width: 960px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em;
+}
+.header p {
+  font-size: 2em;
+}
+.header a {
+  text-decoration: none;
+}
+button {
+  width: 15em;
+  border-radius: 2em;
+  font-size: 1.5em;
+}
+#singlePostCard {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#singlePostCard h4 {
+  margin-bottom: 1em;
+}
+#singlePostCard button {
+  height: 1.3em;
+  font-size: 1em;
+}
