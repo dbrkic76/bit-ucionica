@@ -1,0 +1,21 @@
+main {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main input, main textarea {
+    border: none;
+    padding: 10px;
+}
+
+main button {
+    border: none;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}

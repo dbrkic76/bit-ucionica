@@ -1,0 +1,16 @@
+main {
+    padding: 100px 20px;
+}
+
+.wrapper > div {
+    background-color: whitesmoke;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper button {
+    padding: 10px;
+}

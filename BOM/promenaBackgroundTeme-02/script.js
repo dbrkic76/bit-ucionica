@@ -1,16 +1,19 @@
-let body = document.querySelector("body");
-let buttonChange = document.querySelector("#start");
-let buttonClear = document.querySelector("#stop");
-const setBackground = () => {
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  document.body.style.backgroundColor = "#" + randomColor;
-  color.innerHTML = "#" + randomColor;
-};
-var id;
-buttonChange.addEventListener("click", function () {
-  id = setInterval(setBackground, 500);
+const wrapper = document.getElementById("wrapper");
+const toggleButton = document.getElementById("toggle");
+const offButton = document.getElementById("turnoff");
+const onButton = document.getElementById("turnon");
+
+function toggleBackground() {
+  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  wrapper.style.backgroundColor = "#" + randomColor;
+}
+
+toggleButton.addEventListener("click", toggleBackground);
+
+offButton.addEventListener("click", () => {
+  toggleButton.removeEventListener("click", toggleBackground);
 });
 
-buttonClear.addEventListener("click", function () {
-  clearInterval(id);
+onButton.addEventListener("click", () => {
+  toggleButton.addEventListener("click", toggleBackground);
 });

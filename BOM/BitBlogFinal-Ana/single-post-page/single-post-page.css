@@ -1,0 +1,17 @@
+main {
+    padding: 100px;
+}
+
+main .post-details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main h3 {
+    margin: 15px 0;
+}
+
+main .post-text {
+    width: 70%;
+}
